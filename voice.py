@@ -5,7 +5,7 @@ recognizer = sr.Recognizer()
 
 # Use microphone as source
 with sr.Microphone() as source:
-    print("🎤 Say something...")
+    print(" Speakkkk...")
     # Adjust for ambient noise
     recognizer.adjust_for_ambient_noise(source)
     # Capture audio
@@ -14,8 +14,9 @@ with sr.Microphone() as source:
 try:
     # Convert speech to text using Google Web Speech API
     text = recognizer.recognize_google(audio)
-    print("📝 You said: " + text)
+    print("You said: " + text)
 except sr.UnknownValueError:
-    print("❌ Sorry, I could not understand the audio.")
+    print("Sorry, I could not understand the audio.")
 except sr.RequestError:
+
     print("⚠️ Could not request results; check your internet connection.")
